@@ -15,3 +15,9 @@ The image processing node will also apply the camera calibration to straighten t
 The `camera.launch` file is used to link the USB camera to ROS; make sure to change the parameters according to your camera and to specify the device argument while launching.
 The `follow_line_with_pid.launch` launches the pid_control.py and the follow_line_step_pid.py file. The objective here is to detect the centroid of the green sticky note and give a turtlebot control commands to track the same.
 
+## Results
+### original image:
+![Original Image](https://github.com/spkadam/ros_usb_camera/blob/master/aa1.png)
+### result:
+![Result](https://github.com/spkadam/ros_usb_camera/blob/master/final_result.png)
+
