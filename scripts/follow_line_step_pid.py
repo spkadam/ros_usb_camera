@@ -12,7 +12,7 @@ from pid_control import PID
 class LineFollower(object):
 
     def __init__(self):
-    	rospy.logwarn("Init sticky note follower")
+    	rospy.logwarn("Init sticky note line follower")
         self.bridge_object = CvBridge()
         self.image_sub = rospy.Subscriber("/image_raw",Image,self.camera_callback)
         self.movekobuki_object = MoveKobuki() #code to move bartbot
@@ -26,7 +26,7 @@ class LineFollower(object):
     def camera_callback(self,data):
         
         try:
-            # We select bgr8 because its the OpneCV encoding by default
+            
             cv_image = self.bridge_object.imgmsg_to_cv2(data, desired_encoding="bgr8")
         except CvBridgeError as e:
             print(e)
